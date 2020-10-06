@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta8
+kind: Config
+metadata:
+  name: app
+build:
+  artifacts:
+    - image: kubesail/app
+      context: app
+      sync: { manual: [{ src: app/**/*, dest: . }] }
+deploy:
+  kubectl:
+    manifests:
+      - base/app.yaml
