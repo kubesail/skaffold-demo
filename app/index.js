@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log(`App listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port} and ${process.env.HEY_LOOK_AN_ENVIRONMENT_VARIABLE}`)
 })
