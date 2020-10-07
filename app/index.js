@@ -8,5 +8,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log(`App listening!`, { HEY_LOOK_AN_ENVIRONMENT_VARIABLE })
+  setInterval(() => {
+    console.log(`App listening!`, { HEY_LOOK_AN_ENVIRONMENT_VARIABLE })
+  }, 2000)
 })

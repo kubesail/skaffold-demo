@@ -4,6 +4,6 @@ build:
   artifacts:
     - image: kubesail/app
       context: app
-      sync: { manual: [{ src: app/**/*, dest: . }] }
+      sync: { infer: [app/**/*] }
 deploy:
   kustomize: { paths: [overlays/dev] }
